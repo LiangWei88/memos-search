@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  search-page:
+    image: memos-search:latest
+    build: .
+    ports:
+      - "1111:80"
+    environment:
+      - MEMOS_URL=http://your-memos-instance.com
+      - SEARCH_API_PREFIX=http://your-n8n-api.com/webhook/search?q=
+    restart: unless-stopped

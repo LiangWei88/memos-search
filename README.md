@@ -33,7 +33,7 @@ docker build -t memos-search .
 注意搜索关键字会拼接在的`SEARCH_API_PREFIX` ?q= 的后面，所以请确保你的 API 支持这种格式。
 
 ```bash
-docker run -d -p 8080:80 \
+docker run -d -p 1111:80 \
   -e MEMOS_URL=http://your-memos-instance.com \
   -e SEARCH_API_PREFIX=http://your-n8n-api.com/webhook/search?q= \
   search-page
@@ -41,7 +41,7 @@ docker run -d -p 8080:80 \
 
 ### 5. 访问页面
 
-打开浏览器，访问 `http://localhost:8080` 即可使用搜索页面。
+打开浏览器，访问 `http://localhost:1111` 即可使用搜索页面。
 
 ## 目录结构
 
