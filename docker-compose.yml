@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  search-page:
+  memos-search:
     image: memos-search:latest
     build: .
     ports:
